@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+
+    /* Colors */
+    --Blue-100: hsl(225, 100%, 94%);
+    --Blue-150: hsl(225, 100%, 94%,0.3);
+    --Blue-700: hsl(245, 75%, 52%);
+    --Blue-710: hsla(245, 75%, 52%,0.8);
+    --Blue-50: hsl(225, 100%, 98%);
+    --Gray-600: hsl(224, 23%, 55%);
+    --Blue-950: hsl(223, 47%, 23%);
+
+    /* Font Size */
+    --fs: 16px;
+
+    /* Font weight */
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    /* box shadow */
+    --bs: 0px 25px 25px rgba(0, 0, 0, 0.0477);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height:100vh;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-color: var(--Blue-100);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.order-summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+    max-width: 20rem;
+    border-radius: 20px;
+    background-color: var(--Blue-50);
+    text-align: center;
+    box-shadow: var(--bs);
+
+}
+.image-container img{
+    width:100%;
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:1rem;
+    padding-inline: 2rem;
+}
+.heading{
+    font-size: 22px;
+    line-height: 140%;
+    font-weight: var(--fw-900);
+    color:var(--Blue-950);
+}
+.para1{
+    line-height: 140%;
+    font-weight: var(--fw-500);
+    color:var(--Gray-600);
+    font-size: var(--ff);
+    letter-spacing: 0.2px;
+}
+.para2{
+    font-weight: var(--fw-700);
+    color:var(--Blue-950);
+}
+.para3{
+    font-weight: var(--fw-500);
+    color:var(--Gray-600);
+
+}
+.change{
+    color:var(--Blue-700);
+    font-weight: var(--fw-500);
+}
+.change:hover{
+    text-decoration: none;
+    cursor:pointer;
+}
+.plans{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.joint{
+    background-color: var(--Blue-150);
+    padding:0.7rem ;
+    border-radius: 0.5rem;
+    display: flex;
+    gap:2rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.image-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    gap:1rem;
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    text-align: left;
+    width:100px;
+}
+.button1{
+    background-color: var(--Blue-700);
+    padding-block: 0.9rem;
+    border-radius: 0.5rem;
+    color:var(--Blue-100);
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    font-size: var(--fs);
+    box-shadow: var(--bs);
+}
+.button1:hover{
+    background-color: var(--Blue-710);
+}
+.button2{
+    color:var(--Gray-600);
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    font-size: var(--fs);
+}
+.button2:hover{
+    color:var(--Blue-950);
+    cursor: pointer;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a {
+    color: var(--Blue-710); 
+    text-decoration: none;
+}
+
+/* 2️⃣ Swap background on larger screens */
+@media (min-width: 768px) {
+  body {
+    background-image: url('images/pattern-background-desktop.svg');
+  }
+}
